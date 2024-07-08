@@ -16,7 +16,8 @@
 # limitations under the License.
 #
 
-# export JAVA_HOME=
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home
+ export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-1.8.0_412/Contents/Home
 # export USE_HADOOP=                            # Whether include hadoop jars into zeppelin server process. (true or false)
 # export SPARK_MASTER=                          # Spark master url. eg. spark://master_addr:7077. Leave empty if you want to use local mode.
 # export ZEPPELIN_ADDR                          # Bind address (default 127.0.0.1)
@@ -80,6 +81,8 @@
 # export SPARK_SUBMIT_OPTIONS                   # (optional) extra options to pass to spark submit. eg) "--driver-memory 512M --executor-memory 1G".
 # export SPARK_APP_NAME                         # (optional) The name of spark application.
 # export SPARK_CONF_DIR                         # (optional) In the zeppelin interpreter on docker mode, Need to set the local spark conf folder path
+#export SPARK_HOME=/Users/sunsongyang/spark-3.5.0
+export SPARK_HOME=/Users/sunsongyang/spark-3.5.1
 
 ## Use embedded spark binaries ##
 ## without SPARK_HOME defined, Zeppelin still able to run spark interpreter process using embedded spark binaries.

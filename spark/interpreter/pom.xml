@@ -45,18 +45,18 @@
     <datanucleus.core.version>4.1.17</datanucleus.core.version>
 
     <!-- spark versions -->
-    <spark.version>3.4.1</spark.version>
+    <spark.version>3.5.1</spark.version>
     <protobuf.version>3.21.12</protobuf.version>
     <py4j.version>0.10.9.7</py4j.version>
-    <spark.scala.version>2.12.17</spark.scala.version>
+    <spark.scala.version>2.12.16</spark.scala.version>
     <spark.scala.binary.version>2.12</spark.scala.binary.version>
 
     <spark.archive>spark-${spark.version}</spark.archive>
     <spark.src.download.url>
-      https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}.tgz
+      https://dlcdn.apache.org/spark/${spark.archive}/${spark.archive}.tgz
     </spark.src.download.url>
     <spark.bin.download.url>
-      https://archive.apache.org/dist/spark/${spark.archive}/${spark.archive}-bin-without-hadoop.tgz
+      https://dlcdn.apache.org/spark/${spark.archive}/${spark.archive}-bin-without-hadoop.tgz
     </spark.bin.download.url>
 
     <scala.compile.version>${spark.scala.version}</scala.compile.version>
@@ -554,7 +554,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <spark.scala.version>2.12.17</spark.scala.version>
+        <spark.scala.version>2.12.16</spark.scala.version>
         <spark.scala.binary.version>2.12</spark.scala.binary.version>
       </properties>
     </profile>
@@ -562,8 +562,11 @@
     <!-- profile spark-x only affect spark version used in test -->
     <profile>
       <id>spark-3.5</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
-        <spark.version>3.5.0</spark.version>
+        <spark.version>3.5.1</spark.version>
         <protobuf.version>3.21.12</protobuf.version>
         <py4j.version>0.10.9.7</py4j.version>
       </properties>
@@ -571,9 +574,6 @@
 
     <profile>
       <id>spark-3.4</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <properties>
         <spark.version>3.4.1</spark.version>
         <protobuf.version>3.21.12</protobuf.version>

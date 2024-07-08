@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rimraf dist && rimraf .tmp",
     "prebuild": "npm-run-all clean lint:once",
-    "build:dist": "npm-run-all prebuild && grunt pre-webpack-dist && webpack && grunt post-webpack-dist",
+    "build:dist": "export NODE_OPTIONS=--openssl-legacy-provider && npm-run-all prebuild && grunt pre-webpack-dist && webpack && grunt post-webpack-dist",
     "build:ci": "npm-run-all prebuild && grunt pre-webpack-ci && webpack && grunt post-webpack-dist",
     "lint:watch": "esw --watch src",
     "lint:once": "eslint src",
